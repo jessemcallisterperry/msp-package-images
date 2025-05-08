@@ -1,0 +1,17 @@
+<%= form_with(model: generated_thumbnail) do |form| %>
+  <% if generated_thumbnail.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(generated_thumbnail.errors.count, "error") %> prohibited this generated_thumbnail from being saved:</h2>
+
+      <ul>
+        <% generated_thumbnail.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

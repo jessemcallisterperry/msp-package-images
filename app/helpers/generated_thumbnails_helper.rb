@@ -1,0 +1,2 @@
+module GeneratedThumbnailsHelper
+end

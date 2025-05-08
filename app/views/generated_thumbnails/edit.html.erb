@@ -1,0 +1,12 @@
+<% content_for :title, "Editing generated thumbnail" %>
+
+<h1>Editing generated thumbnail</h1>
+
+<%= render "form", generated_thumbnail: @generated_thumbnail %>
+
+<br>
+
+<div>
+  <%= link_to "Show this generated thumbnail", @generated_thumbnail %> |
+  <%= link_to "Back to generated thumbnails", generated_thumbnails_path %>
+</div>

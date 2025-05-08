@@ -1,0 +1,18 @@
+<% content_for :title, "New generated thumbnail" %>
+
+<h1>Upload Your Sketch</h1>
+
+<%= form_with model: @generated_thumbnail, local: true do |form| %>
+  <div>
+    <%= form.label :sketch %><br>
+    <%= form.file_field :sketch %>
+  </div>
+  <br>
+  <%= form.submit "Generate Thumbnail" %>
+<% end %>
+
+<br>
+
+<div>
+  <%= link_to "Back to generated thumbnails", generated_thumbnails_path %>
+</div>

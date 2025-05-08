@@ -1,0 +1,14 @@
+<h1>Result</h1>
+
+<h2>Original Sketch</h2>
+<% if @generated_thumbnail.sketch.attached? %>
+  <%= image_tag @generated_thumbnail.sketch, style: 'max-width: 640px; max-height: 360px; width: auto; height: auto;' %>
+<% else %>
+  <p>No sketch uploaded.</p>
+<% end %>
+
+<h2>Generated Thumbnail (Placeholder)</h2>
+<%= image_tag "https://placehold.co/1280x720", alt: "Placeholder Thumbnail", style: 'max-width: 640px; max-height: 360px; width: auto; height: auto;' %>
+
+<br>
+<%= link_to "Upload Another", new_generated_thumbnail_path %>

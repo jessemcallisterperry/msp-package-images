@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Generated thumbnails" %>
+
+<h1>Generated thumbnails</h1>
+
+<div id="generated_thumbnails">
+  <% @generated_thumbnails.each do |generated_thumbnail| %>
+    <%= render generated_thumbnail %>
+    <p>
+      <%= link_to "Show this generated thumbnail", generated_thumbnail %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New generated thumbnail", new_generated_thumbnail_path %>
